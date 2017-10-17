@@ -34,10 +34,8 @@ gem 'sneaky-save', git: 'https://github.com/einzige/sneaky-save.git'
 
 
 gem 'nokogiri', '~> 1.6.1'
-gem 'webmoney', git: 'https://github.com/Kosechok/webmoney.git'
 gem 'devise', '~> 3.4.1'
 gem 'omniauth', '~> 1.2.2'
-gem 'oa-webmoney', git: 'https://github.com/skyeagle/oa-webmoney.git'
 
 gem 'pnotify-rails', '~> 3.0.0'
 gem "font-awesome-rails"

@@ -1,23 +1,9 @@
 GIT
-  remote: https://github.com/Kosechok/webmoney.git
-  revision: 373203284993bb5bc11c79435f8df1352b37a4a9
-  specs:
-    webmoney (0.0.15.pre)
-      nokogiri
-
-GIT
   remote: https://github.com/einzige/sneaky-save.git
   revision: 7e7596720e76a3c243042be2f5f916525b143a54
   specs:
     sneaky-save (0.1.2)
       activerecord (>= 3.2.0)
-
-GIT
-  remote: https://github.com/skyeagle/oa-webmoney.git
-  revision: 5411f25831dc1e3e51bc3ec42748c7cd4e395804
-  specs:
-    oa-webmoney (0.1.3)
-      webmoney (~> 0.0.12)
 
 GEM
   remote: https://rubygems.org/
@@ -57,7 +43,7 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (7.1.4.1)
+    autoprefixer-rails (7.1.5)
       execjs
     bcrypt (3.1.11)
     bootstrap-sass (3.3.4.1)
@@ -95,7 +81,8 @@ GEM
     highstocks-rails (2.1.5)
       railties (>= 3.1)
     hitimes (1.2.6)
-    i18n (0.8.6)
+    i18n (0.9.0)
+      concurrent-ruby (~> 1.0)
     i18n-js (2.1.2)
       i18n
     jbuilder (2.6.4)
@@ -157,18 +144,18 @@ GEM
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
     redis (3.3.5)
-    redis-actionpack (5.0.1)
+    redis-actionpack (5.0.2)
       actionpack (>= 4.0, < 6)
       redis-rack (>= 1, < 3)
-      redis-store (>= 1.1.0, < 1.4.0)
-    redis-activesupport (5.0.3)
+      redis-store (>= 1.1.0, < 2)
+    redis-activesupport (5.0.4)
       activesupport (>= 3, < 6)
-      redis-store (~> 1.3.0)
+      redis-store (>= 1.3, < 2)
     redis-namespace (1.5.3)
       redis (~> 3.0, >= 3.0.4)
-    redis-rack (2.0.2)
+    redis-rack (2.0.3)
       rack (>= 1.5, < 3)
-      redis-store (>= 1.2, < 1.4)
+      redis-store (>= 1.2, < 2)
     redis-rack-cache (2.0.1)
       rack-cache (~> 1.6.0)
       redis-store (~> 1.3.0)
@@ -181,7 +168,7 @@ GEM
     require_all (1.4.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
-    sass (3.5.1)
+    sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -259,7 +246,6 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   nokogiri (~> 1.6.1)
-  oa-webmoney!
   omniauth (~> 1.2.2)
   pg (= 0.15.1)
   pnotify-rails (~> 3.0.0)
@@ -281,7 +267,6 @@ DEPENDENCIES
   tiny_tds (= 0.7.0)
   turbolinks
   uglifier (>= 1.3.0)
-  webmoney!
 
 RUBY VERSION
    ruby 2.0.0p648

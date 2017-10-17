@@ -4,7 +4,8 @@ class Stat < ActiveRecord::Base
  	def self.getStat(email, date)
  		Stat.joins(:user).select("users.FIO")
  		.where('stats.id_e = ? and DATE(stats.date_log) = ?', email, date)
- 		.group("users.FIO").count()   
+ 		.group("users.FIO").count()  
+ 		.map{|x| x}
  	end
 end
 
