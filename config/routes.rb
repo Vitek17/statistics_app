@@ -2,7 +2,6 @@ TestApp::Application.routes.draw do
 #  get 'statistics/graph'
   match '/statistics',       to: 'statistics#index', via: :get
   match '/statistics',       to: 'statistics#graph', via: :post
-  match '/statistics/graphic',       to: 'statistics#graphic', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

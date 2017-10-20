@@ -3,14 +3,14 @@ class StatisticsController < ApplicationController
 before_action :set_email, :set_date, only: [:graph]
 
   begin
-    
-  rescue Exception => e
-    
+    rescue Exception => e
   end
+
   def index
   end
+  
   def graph
-    @ar = Stat.getAnswersStatistic(@email, @date)
+    @ar = Statistics.getAnswersStatistic(@email, @date)
     render json: @ar
   end
 

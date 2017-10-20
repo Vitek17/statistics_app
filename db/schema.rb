@@ -11,17 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005215405) do
+ActiveRecord::Schema.define(version: 20171020134909) do
 
-  create_table "emails", force: true do |t|
-    t.integer  "ID_E"
-    t.string   "EMAIL"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "stats", force: true do |t|
-    t.integer  "id_m"
+  create_table "mails_answers_logs", force: true do |t|
     t.integer  "id_e"
     t.integer  "id_u"
     t.datetime "date_log"
@@ -29,9 +21,21 @@ ActiveRecord::Schema.define(version: 20171005215405) do
     t.datetime "updated_at"
   end
 
+  create_table "mails_emails", force: true do |t|
+    t.integer  "id_e"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statistics", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
-    t.integer  "ID_U"
-    t.string   "FIO"
+    t.integer  "id_u"
+    t.string   "fio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
