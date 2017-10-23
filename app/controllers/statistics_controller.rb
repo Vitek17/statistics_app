@@ -10,8 +10,11 @@ before_action :set_email, :set_date, only: [:graph]
   end
   
   def graph
-    @ar = Statistics.getAnswersStatistic(@email, @date)
-    render json: @ar
+    @ar = Statistics.getAnswersStatistics(@email, @date)
+
+    @ar2 = Statistics.getMovesStatistics(@email, @date)
+
+    render json: {answ: @ar, move: @ar2}
   end
 
   private

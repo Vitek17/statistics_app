@@ -55,55 +55,18 @@ namespace :db do
 
 
 
-    20.times do |n|
-      MailsAnswersLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now + (n%3+1)*86400)
-    end
-
-    90.times do |n|
-      MailsAnswersLog.create!(id_e: 53, id_u: n%6+1, date_log: Time.now + (n%3+1)*86400)
-    end
-
-
-    70.times do |n|
-      MailsAnswersLog.create!(id_e: 66, id_u: n%6+1, date_log: Time.now + (n%3+1)*86400)
-    end
-
-
-    10.times do |n|
-      MailsAnswersLog.create!(id_e: 44, id_u: n%6+1, date_log: Time.now + (n%3+1)*86400)
-    end
-
-
-    60.times do |n|
-      MailsAnswersLog.create!(id_e: 21, id_u: n%6+1, date_log: Time.now + (n%3+1)*86400)
-    end
-
-
-
-
-
-    20.times do |n|
-      MailsAnswersLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now - (n%3+1)*86400)
-    end
-
-    90.times do |n|
-      MailsAnswersLog.create!(id_e: 53, id_u: n%6+1, date_log: Time.now - (n%3+1)*86400)
-    end
-
-
-    70.times do |n|
-      MailsAnswersLog.create!(id_e: 66, id_u: n%6+1, date_log: Time.now - (n%3+1)*86400)
-    end
-
-
-    10.times do |n|
-      MailsAnswersLog.create!(id_e: 44, id_u: n%6+1, date_log: Time.now - (n%3+1)*86400)
-    end
-
-
-    60.times do |n|
-      MailsAnswersLog.create!(id_e: 21, id_u: n%6+1, date_log: Time.now - (n%3+1)*86400)
-    end
+   
+    MoveLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
+    MoveLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
+    MoveLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
+    MoveLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
+    MoveLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
+    MoveLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+    MoveLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
+    MoveLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
+    MoveLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
+    MoveLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
+    MoveLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
 
   end
 end
