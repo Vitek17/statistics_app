@@ -5,13 +5,51 @@
 	//min-width: 310px;
 	//min-width: 500px;
 	//max-width: 800px;
+	max-width: 600px; 
 	height: 400px;
 	margin: 0 auto;
 }
+#container1 {
+	float: left;  
+}
+#container2{
+	float:right; 
+}
+
 .ui-selectmenu-text {
     text-align: center;
 }
 
 #email .ui-menu-item{
     text-align: center;
+}
+
+
+#output1{
+	float:left; 
+	clear: left; 
+	margin-left: 40px; 
+	border: 1px dashed black; 
+	padding: 5px 10px; 
+	border-radius: 5px;
+}
+#output2{
+	float:right; 
+	clear: right; 
+	margin-right: 40px; 
+	border: 1px dashed black; 
+	padding: 5px 10px; 
+	border-radius: 5px;
+}
+
+#datepicker {
+	font-size: 15px; 
+	height: 29px; 
+	text-align: center;
+    width: 150px;
+}
+
+#select_link {
+	padding: 5px 10px; 
+	font-size: 16px;
 }
