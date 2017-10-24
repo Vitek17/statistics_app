@@ -54,7 +54,7 @@ gem 'redis-rack-cache'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem "highstocks-rails"
+#gem "highstocks-rails"
 #gem 'bootbox-rails', '~> 0.5.0' start using jquery-confirm      http://craftpip.github.io/jquery-confirm/#options
 gem 'jquery-cookie-rails'
 gem 'jquery-ui-rails'
