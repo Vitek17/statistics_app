@@ -10,6 +10,6 @@
 #
 
 class User < ActiveRecord::Base
-  self.primary_key = "ID_U"
-  has_many :mails_answers_logs, foreign_key: "ID_U"
+  self.primary_key = "id_u"
+  has_many :mails_answers_logs, foreign_key: "id_u"
 end
