@@ -7,7 +7,7 @@
 #  updated_at :datetime
 #
 
-class Statistics < ActiveRecord::Base
+class Statistics
 
   def self.getAnswersStatistics(email, date)
     MailsAnswersLog.joins(:user)
