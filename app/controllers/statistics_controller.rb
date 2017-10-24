@@ -22,10 +22,10 @@ before_action :set_email, :set_date, only: [:graph]
     def set_email
       @email = params[:email].to_i
     end
-    
+
     def set_date
       @date = Date.strptime(params[:date], '%m/%d/%Y')
-      @date = @date.to_s + "%"
+      #@date = @date.to_s + "%"
     end
 
 end
