@@ -9,6 +9,8 @@ $("#container1").ready(function() {
 
   $( document ).ajaxComplete(function() {
     if (seriesCounter === 1) {
+              $( "#output1" ).css("border", "1px solid gray");
+              $( "#output2" ).css("border", "1px solid gray");
               $( "#output1" ).text( "Answers:" );
               $( "#output2" ).text( "Moves:" );
            for(var i=0; i<seriesOptions1.length; i++)
