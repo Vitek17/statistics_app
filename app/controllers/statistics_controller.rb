@@ -36,8 +36,8 @@ before_action :set_email, :set_date, only: [:graph]
 
     def set_date
       
-      @date1 = DateTime.parse(params[:date1]).to_i
-      @date2 = DateTime.parse(params[:date2]).to_i
+      @date1 = DateTime.parse(params[:date1])
+      @date2 = DateTime.parse(params[:date2])
 
       #@date1 = DateTime.parse(params[:date1])
       #@date2 = DateTime.parse(params[:date2])
