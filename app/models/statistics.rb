@@ -28,7 +28,7 @@ class Statistics
   def self.getAnswersPeriod(email, date1, date2)
     MailsAnswersLog.joins(:user)
     .select("users.FIO")
-    .where("mails_answers_logs.id_e = ? and mails_answers_logs.date_log between to_timestamp(?) and to_timestamp(?)", email, date1, date2)
+    .where("mails_answers_logs.id_e = ? and mails_answers_logs.date_log between ? and ?", email, date1, date2)
     .group("users.FIO").count()
     .map{|x| x}
   end
@@ -36,7 +36,7 @@ class Statistics
   def self.getMovesPeriod(email, date1, date2)
     MoveLog.joins(:user)
     .select("users.FIO")
-    .where("mails_move_log.id_e = ? and mails_move_log.date_log between to_timestamp(?) and to_timestamp(?)", email, date1, date2)
+    .where("mails_move_log.id_e = ? and mails_move_log.date_log between ? and ?", email, date1, date2)  #to_timestamp(?)
     .group("users.FIO").count()
     .map{|x| x}
   end
