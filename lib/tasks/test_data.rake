@@ -122,11 +122,11 @@ namespace :db do
     User.create!(id_u: 5, fio: "Высоцкий")
     User.create!(id_u: 6, fio: "Леонов")
 
-    MailsEmail.create!(id_e: 65, email: "support@ya.ru")
-    MailsEmail.create!(id_e: 53, email: "telepay@ya.ru")
-    MailsEmail.create!(id_e: 66, email: "passport@ya.ru")
-    MailsEmail.create!(id_e: 44, email: "financial@ya.ru")
-    MailsEmail.create!(id_e: 21, email: "arbitrage@ya.ru")
+    MailsEmail.create!(id_e: 65, email: "support3@ya.ru")
+    MailsEmail.create!(id_e: 53, email: "support4@ya.ru")
+    MailsEmail.create!(id_e: 66, email: "support2@ya.ru")
+    MailsEmail.create!(id_e: 44, email: "support5@ya.ru")
+    MailsEmail.create!(id_e: 21, email: "support1@ya.ru")
 
 
 

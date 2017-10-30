@@ -1,6 +1,10 @@
 // Place all the styles related to the Statistics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
+
 #container1, #container2 {
 	//min-width: 310px;
 	//min-width: 500px;
@@ -11,6 +15,7 @@
 }
 #container1 {
 	float: left;  
+	clear: both;
 }
 #container2{
 	float:right; 
@@ -24,6 +29,12 @@
     text-align: center;
 }
 
+#email-button{
+	vertical-align: unset !important;
+	margin: 5px 0;
+	float: left;
+	height: 34px;
+}
 
 #output1{
 	float:left; 
@@ -42,14 +53,17 @@
 	border-radius: 4px;
 }
 
-#datepicker {
-	font-size: 15px; 
-	height: 29px; 
-	text-align: center;
-    width: 150px;
-}
+
 
 #select_link {
-	padding: 5px 10px; 
-	font-size: 16px;
+	padding: 5px 10px;
+	font-size: 15px;
+	float: left;
+	margin: 4px 8px;
+}
+
+.dtp_class{
+	width: 180px;
+	float: left;
+	margin: 5px 5px;
 }

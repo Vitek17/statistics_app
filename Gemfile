@@ -10,10 +10,11 @@ group :development, :test do
 	gem 'sqlite3', '1.3.13'
 end
 # Use SCSS for stylesheets
-gem 'sass-rails', '5.0.6'
+gem 'sass-rails', '>= 3.2'
 gem 'sprockets', '3.6.0'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootstrap-select-rails', '~> 1.12', '>= 1.12.1'
+gem 'twitter-bootstrap-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -34,6 +35,9 @@ gem 'activerecord-sqlserver-adapter', '~> 4.1.0'
 gem 'composite_primary_keys'
 gem 'sneaky-save', git: 'https://github.com/einzige/sneaky-save.git'
 
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 gem 'nokogiri', '~> 1.6.1'
 gem 'devise', '~> 3.4.1'

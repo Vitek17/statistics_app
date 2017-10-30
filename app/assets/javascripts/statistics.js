@@ -1,11 +1,34 @@
-$("#container1").ready(function() {
-  
-  $( "#datepicker" ).datepicker({ firstDay: 1 }).datepicker("setDate", new Date());
-  $( "#email" ).selectmenu();
+ $("#container1").ready(function() {
+    $( "#email" ).selectmenu();
+  $('#datetimepicker1').datetimepicker();
+
+  $('#datetimepicker2').datetimepicker({
+      useCurrent: false //Important! See issue #1075
+  });
+  $("#datetimepicker1").on("dp.change", function (e) {
+      $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+  });
+  $("#datetimepicker2").on("dp.change", function (e) {
+      $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+  });
+ // $('.dropdown').dropdown();
+  //moment().format('LLLL');
+ //$('#datetimepicker2').datetimepicker( {options.format: 'yyyy-mm-dd hh:ii'});
+     /*$('#datetimepicker2').datetimepicker({
+                    locale: 'ru'
+                });*/
+ //$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+  /*  $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss'
+      });*/
+  //$('.datepicker').datepicker({ firstDay: 1 }).datepicker("setDate", new Date());
+  //$( "#datepicker" ).datepicker({ firstDay: 1 }).datepicker("setDate", new Date());
+
   var createChart, seriesCounter, seriesOptions1, seriesOptions2; 
   seriesOptions1 = [];
   seriesOptions2 = [];
   seriesCounter = 0;
+  var date1, date2;
 
   $( document ).ajaxComplete(function() {
     if (seriesCounter === 1) {
@@ -28,7 +51,8 @@ $("#container1").ready(function() {
   
   $('#select_link').click(function() {
     var email = $( "#email" ).val();
-    var date = $( "#datepicker" ).val();
+    date1 = $( "#datetimepicker1 .form-control" ).val();
+    date2 = $( "#datetimepicker2 .form-control" ).val();
     seriesCounter = 0;
     $.ajaxSetup({
       'beforeSend': function(xhr) {
@@ -41,7 +65,8 @@ $("#container1").ready(function() {
       dataType: 'json',
       data: {
         email: email,
-        date: date
+        date1: date1,
+        date2: date2
       },
       success: function(json, status, xhr) {
         seriesOptions1 = json.answ;
@@ -62,10 +87,10 @@ $("#container1").ready(function() {
           type: 'pie'
       },
       title: {
-          text: 'Answers: ' + $( "#datepicker" ).val()
+          text: 'Answers: ' //+ $( "#datepicker" ).val()
       },
-      tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      tooltip: {   
+          pointFormat: '{series.name}: <b>{point.y}</b>'    //{point.percentage:.1f}%
       },
       plotOptions: {
           pie: {
@@ -99,10 +124,10 @@ $("#container1").ready(function() {
           type: 'pie'
       },
       title: {
-          text: 'Moves: ' + $( "#datepicker" ).val()
+          text: 'Moves: ' //+ $( "#datepicker" ).val()
       },
       tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          pointFormat: '{series.name}: <b>{point.y}</b>'    //{point.percentage:.1f}%
       },
       plotOptions: {
           pie: {

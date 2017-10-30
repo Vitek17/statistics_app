@@ -10,11 +10,17 @@ before_action :set_email, :set_date, only: [:graph]
   end
   
   def graph
-    @ar = Statistics.getAnswersStatistics(@email, @date)
+    #@ar = Statistics.getAnswers(@email, @date1.strftime('%Y-%m-%d'))
 
-    @ar2 = Statistics.getMovesStatistics(@email, @date)
+    #@ar2 = Statistics.getMoves(@email, @date1.strftime('%Y-%m-%d'))
+
+
+    @ar = Statistics.getAnswersPeriod(@email, @date1, @date2)
+
+    @ar2 = Statistics.getMovesPeriod(@email, @date1,  @date2)
 
     render json: {answ: @ar, move: @ar2}
+    #render json: {answ: @date1, move: @date2}
   end
 
   private
@@ -24,7 +30,11 @@ before_action :set_email, :set_date, only: [:graph]
     end
 
     def set_date
-      @date = Date.strptime(params[:date], '%m/%d/%Y')
+      
+      @date1 = DateTime.parse(params[:date1])
+      @date2 = DateTime.parse(params[:date2])
+
+      #@date = Date.strptime(params[:date], '%m/%d/%Y')
       #@date = @date.to_s + "%"
     end
 
