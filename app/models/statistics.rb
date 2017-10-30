@@ -28,7 +28,7 @@ class Statistics
   def self.getAnswersPeriod(email, date1, date2)
     MailsAnswersLog.joins(:user)
     .select("users.FIO")
-    .where("mails_answers_logs.id_e = ? and mails_answers_logs.date_log between '2017-11-01 00:00:00'::timestamp and '2017-11-01 23:55:00'::timestamp", email)
+    .where("mails_answers_logs.id_e = ? and mails_answers_logs.date_log between ? and ?", email, date1, date2)
     .group("users.FIO").count()
     .map{|x| x}
   end
