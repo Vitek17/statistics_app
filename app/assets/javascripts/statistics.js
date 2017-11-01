@@ -125,6 +125,9 @@
         data: seriesOptions1
       }]
     });
+
+
+    
 };
 
   createChart2 = function() {
@@ -166,4 +169,5 @@
 
 
 
+  $('#select_link')[0].click();
 });
