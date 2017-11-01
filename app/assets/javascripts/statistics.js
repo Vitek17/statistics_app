@@ -1,9 +1,18 @@
  $("#container1").ready(function() {
-    $( "#email" ).selectmenu();
-  $('#datetimepicker1').datetimepicker();
+  $( "#email" ).selectmenu();
+  var d = new Date();
+  var month = d.getMonth();
+  var day = d.getDate();
+  var year = d.getFullYear();
+  var d1 = new Date(year, month, day, 00, 00, 00);
+  //alert(new Date(year, month, day, 00, 01));
+  $('#datetimepicker1').datetimepicker({
+      defaultDate: d1
+  });
 
   $('#datetimepicker2').datetimepicker({
-      useCurrent: false //Important! See issue #1075
+      useCurrent: false, //Important! See issue #1075
+      defaultDate: d
   });
   $("#datetimepicker1").on("dp.change", function (e) {
       $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
@@ -11,6 +20,10 @@
   $("#datetimepicker2").on("dp.change", function (e) {
       $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
   });
+  /*$('#datetimepicker2').data("DateTimePicker").defaultDate({
+    Default: false,
+    Accepts: new Date(year, month, day, 00, 01)
+  });*/
  // $('.dropdown').dropdown();
   //moment().format('LLLL');
  //$('#datetimepicker2').datetimepicker( {options.format: 'yyyy-mm-dd hh:ii'});
