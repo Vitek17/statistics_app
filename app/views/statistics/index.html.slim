@@ -56,7 +56,7 @@ input type="button" value="Get data" id='select_link' /
 #output2 
 //= form_for @ar, url: {controller: "statistics_controller", action: "graph"} do |r|
 //  = f.field_for r
-- @em.keys.each do |key|
+- @tabl.keys.each do |key|
   tr
     td
       | Key: #{key}
