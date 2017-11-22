@@ -15,27 +15,27 @@ before_action :set_email, :set_date, only: [:graph]
 
     @ar2 = Statistics.getMovesPeriod(@email, @date1,  @date2)
 
-    tabl = Hash.new
+    @tabl = Hash.new
 
 
-    tabl.merge!(@ar)
+    @tabl.merge!(@ar)
 
-    tabl.each do |k, v|
-      tabl[k] = [tabl[k], 0, 0]
+    @tabl.each do |k, v|
+      @tabl[k] = [@tabl[k], 0, 0]
     end
      
 
     @ar2.each do |k, v|
-      if tabl.key?(k)
-         tabl[k][1] = v
+      if @tabl.key?(k)
+         @tabl[k][1] = v
       else
-         tabl[k] = [0, v, 0]
+         @tabl[k] = [0, v, 0]
       end
     end
 
-    tabl = tabl.map{|k, v| [k, v[0], v[1], v[2]]}
+    @tabl = @tabl.map{|k, v| [k, v[0], v[1], v[2]]}
 
-    render json: {answ: @ar, move: @ar2, ap: tabl}
+    render json: {answ: @ar, move: @ar2, ap: @tabl}
   end
 
 
