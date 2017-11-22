@@ -82,8 +82,10 @@
         date2: date2
       },
       success: function(json, status, xhr) {
-        seriesOptions1 = json.answ;
-        seriesOptions2 = json.move;
+        seriesOptions1 = json.ap.map(function(x){ if( x[1] != 0) return [x[0], x[1]] ; else return [x[0],null];});
+        seriesOptions2 = json.ap.map(function(x){ if( x[2] != 0) return [x[0], x[2]] ; else return [x[0],null];});
+        var qw = json.ap.map(function(x){ if( x[1] != 0) return [x[0], x[1]] ;});
+        console.log(qw);
       }
     });   
     seriesCounter += 1;
@@ -154,7 +156,18 @@
                   format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                   style: {
                       color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                  }
+                  }/*,
+
+
+                ///////////////////////////////////////////////////////////////////////
+                  formatter: function() {
+                      if (this.y != 0) {
+                        return this.y +'%';
+                      } 
+                      else {
+                        return null;
+                      }
+                  }*/
               }
           }
       },

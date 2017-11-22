@@ -6,42 +6,42 @@ namespace :db do
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+    #MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+   # MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+   # MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+    #MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+   # MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 65, id_u: 1, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 53, id_u: 2, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 66, id_u: 3, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 44, id_u: 4, date_log: Time.now)
     MailsAnswersLog.create!(id_e: 21, id_u: 5, date_log: Time.now)
-    MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
+    #MailsAnswersLog.create!(id_e: 65, id_u: 6, date_log: Time.now)
     
 
 
     30.times do |n|
-      MailsAnswersLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now)
+      MailsAnswersLog.create!(id_e: 65, id_u: n%4+1, date_log: Time.now)
     end
 
     20.times do |n|
@@ -67,7 +67,7 @@ namespace :db do
 
 
     159.times do |n|
-      MailsAnswersLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now - (n%19+1)*86400)
+      MailsAnswersLog.create!(id_e: 65, id_u: n%4+1, date_log: Time.now - (n%19+1)*86400)
     end
 
     140.times do |n|
@@ -92,7 +92,7 @@ namespace :db do
 
 
  130.times do |n|
-      MailsAnswersLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now + (n%11)*86400)
+      MailsAnswersLog.create!(id_e: 65, id_u: n%4+1, date_log: Time.now + (n%11)*86400)
     end
 
     120.times do |n|
@@ -146,7 +146,7 @@ namespace :db do
 
 
      15.times do |n|
-      MoveLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now)
+      MoveLog.create!(id_e: 65, id_u: n%4+3, date_log: Time.now)
     end
 
     30.times do |n|
@@ -172,7 +172,7 @@ namespace :db do
 
 
      115.times do |n|
-      MoveLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now + (n%11)*86400)
+      MoveLog.create!(id_e: 65, id_u: n%4+3, date_log: Time.now + (n%11)*86400)
     end
 
     130.times do |n|
@@ -199,7 +199,7 @@ namespace :db do
 
 
      145.times do |n|
-      MoveLog.create!(id_e: 65, id_u: n%6+1, date_log: Time.now - (n%19+1)*86400)
+      MoveLog.create!(id_e: 65, id_u: n%4+3, date_log: Time.now - (n%19+1)*86400)
     end
 
     140.times do |n|
